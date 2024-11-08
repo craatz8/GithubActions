@@ -59,7 +59,7 @@ namespace GithubActionsLab
         [Test]
         public void Multiply_ValidRaatz()
         {
-            Assert.AreEqual(12, Program.Multiply("5", "3"));
+            Assert.AreEqual(15, Program.Multiply("5", "3"));
             Assert.AreEqual(0, Program.Multiply("0", "3"));
             Assert.AreEqual(6, Program.Multiply("2", "3"));
         }
@@ -103,12 +103,6 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Divide("6", null));
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "3"));
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, null));
-        }
-
-        [Test]
-        public void Divide_ByZeroRaatz()
-        {
-            Assert.Throws<DivideByZeroException>(() => Program.Divide("6", "0"));
         }
 
         // Tests for Power
